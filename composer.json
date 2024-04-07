@@ -1,0 +1,33 @@
+{
+    "name": "carrontiger/conversion",
+    "description": "Conversion from/to decimal numerals.",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Callum Stotter",
+            "email": "carrontiger@users.noreply.github.com",
+            "role": "Developer",
+            "homepage": "https://github.com/carrontiger/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "carrontiger\\Conversion\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\carrontiger\\Conversion\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4|^8.0|^8.1|^8.2",
+        "ext-json": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
