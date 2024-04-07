@@ -16,4 +16,9 @@ class CaseInsensitiveAlphaDecimalConverter extends AbstractDecimalConverter
     {
         parent::__construct('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
     }
+
+    public function toDecimal(string $numeral): int
+    {
+        return parent::toDecimal(strtoupper($numeral));
+    }
 }
