@@ -42,7 +42,7 @@ class CaseSensitiveAlphaDecimalConverterTest extends TestCase
             [61, 'z'],
             [62, '10'],
             [63, '11'],
-            [100, '1c'],
+            [123, '1z'],
             [2147483647, '2LKcb1'],
             [9223372036854775807, 'AzL8n0Y58m7'],
         ];

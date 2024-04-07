@@ -46,7 +46,7 @@ class AsciiDecimalConverterTest extends TestCase
             [93, '~'],
             [94, '10'],
             [95, '11'],
-            [100, '16'],
+            [123, '1T'],
             [2147483647, 'Rll}&'],
             [9223372036854775807, 'G99F2ra^OZ'],
         ];

@@ -39,7 +39,7 @@ class CaseInsensitiveAlphaDecimalConverterTest extends TestCase
             [35, 'Z'],
             [36, '10'],
             [37, '11'],
-            [100, '2S'],
+            [123, '3F'],
             [2147483647, 'ZIK0ZJ'],
             [9223372036854775807, '1Y2P0IJ32E8E7'],
         ];
