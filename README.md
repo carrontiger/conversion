@@ -17,7 +17,7 @@ Conversion from/to decimal numerals
 
 ### Meta Information
 
-| Converter                                | Base | "Digits"                                                                                            |
+| Converter                                | Base | “Digits”                                                                                            |
 |------------------------------------------|-----:|-----------------------------------------------------------------------------------------------------|
 | ``BinaryConverter``                      |    2 | ``01``                                                                                              |
 | ``OctalConverter``                       |    8 | ``01234567``                                                                                        |
@@ -102,6 +102,10 @@ echo $hexadecimalConverter->toDecimal('7B');
 
 ### Case-Insensitive Alpha-Decimal Numerals
 
+The *case-insensitive alpha-decimal numeral* encoding uses the following 36 “digits”: 
+
+``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ``
+
 ##### Conversion of decimal numeral to a case-insensitive alpha-decimal numeral
 
 ```php
@@ -125,6 +129,10 @@ echo $ciAlphaDecimalConverter->toDecimal('3F');
 ```
 
 ### Case-Sensitive Alpha-Decimal Numerals
+
+The *case-sensitive alpha-decimal numeral* encoding uses the following 62 “digits”: 
+
+``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz``
 
 ##### Conversion of decimal numeral to a case-sensitive alpha-decimal numeral
 
@@ -150,6 +158,18 @@ echo $alphaDecimalConverter->toDecimal('1z');
 
 ### ASCII-Numerals
 
+The *ASCII numeral* encoding uses the following 94 “digits”:
+
+``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!"#$%&'()*+,-./:;<=>?@[\]^_`{\|}~``
+
+Due to the use of non-alphabetic characters, it is not practical for *ASCII numerals* 
+to be embedded in texts or be used as plain HTTP query arguments, for example. 
+One purpose would be to encode large integer numbers, compactly.
+But most of all, this is an example of an arbitrary numeral system, than one can define.
+
+If you were to define a numeral system (by extending the ``AbstractDecimalConverter`` class), 
+be advised, to use only **one-byte characters** as digits. 
+
 ##### Conversion of decimal numeral to an ASCII numeral
 
 ```php
@@ -161,7 +181,7 @@ echo $asciiDecimalConverter->fromDecimal(123);
 //  "1T"
 ```
 
-##### Conversion of a ASCII numeral numeral to a decimal numeral
+##### Conversion of an ASCII numeral to a decimal numeral
 
 ```php
 use carrontiger\Conversion\AsciiDecimalConverter;
